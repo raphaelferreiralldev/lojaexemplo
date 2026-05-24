@@ -25,7 +25,7 @@ export function CarrinhoProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const salvo = localStorage.getItem("carrinho")
-    if (salvo) setItens(JSON.parse(salvo))
+    if (salvo) setItens(JSON.parse(salvo) as ItemCarrinho[])
   }, [])
 
   useEffect(() => {
