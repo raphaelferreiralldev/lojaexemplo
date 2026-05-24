@@ -17,7 +17,7 @@ export default function PaginaProduto({ params }: { params: Promise<{ id: string
   if (!produto) notFound()
 
   function handleAdicionar() {
-    adicionarItem(produto)
+    adicionarItem(produto!)
     setAdicionado(true)
     setTimeout(() => setAdicionado(false), 2000)
   }
